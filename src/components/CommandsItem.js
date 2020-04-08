@@ -21,6 +21,10 @@ const Title = styled.Text`
   ${({ theme }) => theme.messageInput.suggestions.command.title.css}
 `;
 
+const CommandText = styled.Text`
+  ${({ theme }) => theme.messageInput.suggestions.command.text.css}
+`;
+
 /**
  * @example ./docs/CommandsItem.md
  * @extends PureComponent
@@ -43,9 +47,9 @@ export const CommandsItem = themed(
         <Container>
           <Top>
             <Title>/{name} </Title>
-            <Text>{args}</Text>
+            <CommandText>{args}</CommandText>
           </Top>
-          <Text>{description}</Text>
+          <CommandText>{description}</CommandText>
         </Container>
       );
     }
